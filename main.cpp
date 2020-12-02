@@ -69,14 +69,14 @@ template <class T> void List<T>::del() {
 			end->next = NULL;
 			delete list;
 		}
-		cout << "Элемент удален" << endl;
+		cout << "Р­Р»РµРјРµРЅС‚ СѓРґР°Р»РµРЅ" << endl;
 	}
 }
 
 template <class T> void List<T>::show() {
 	List<T>* list = begin;
 	if (list == NULL) {
-		cout << "Список пуст";
+		cout << "РЎРїРёСЃРѕРє РїСѓСЃС‚";
 	}
 	else {
 		while (list) {
@@ -88,7 +88,7 @@ template <class T> void List<T>::show() {
 }
 
 template<class T> ostream& operator <<(ostream& out, List<T>& list) {
-	if (list.begin == NULL) out << "Список пуст";
+	if (list.begin == NULL) out << "РЎРїРёСЃРѕРє РїСѓСЃС‚";
 	else {
 		while (list.begin) {
 			out << list.begin->info << " ";
@@ -135,8 +135,8 @@ int main()
 	while (quit) {
 		switch (menuMain()) {
 		case 0:
-			vib = menuvib("Добавление элемента в первый список", "Добавление элемента во второй список");
-			cout << "Введите элемент: ";
+			vib = menuvib("Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РїРµСЂРІС‹Р№ СЃРїРёСЃРѕРє", "Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІРѕ РІС‚РѕСЂРѕР№ СЃРїРёСЃРѕРє");
+			cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚: ";
 			if (vib == 0) {
 				d1 = getInt();
 				list1.add(d1);
@@ -148,26 +148,26 @@ int main()
 			system("pause");
 			break;
 		case 1:
-			vib = menuvib("Вывод первого списка", "Вывод второго списка");
+			vib = menuvib("Р’С‹РІРѕРґ РїРµСЂРІРѕРіРѕ СЃРїРёСЃРєР°", "Р’С‹РІРѕРґ РІС‚РѕСЂРѕРіРѕ СЃРїРёСЃРєР°");
 			if (vib == 0) list1.show();
 			else list2.show();
 			system("pause");
 			break;
 		case 2:
-			vib = menuvib("Удаление последнего элемента первого списка", "Удаление последнего элемента второго списка");
+			vib = menuvib("РЈРґР°Р»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РїРµСЂРІРѕРіРѕ СЃРїРёСЃРєР°", "РЈРґР°Р»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РІС‚РѕСЂРѕРіРѕ СЃРїРёСЃРєР°");
 			if (vib == 0) list1.del();
 			else list2.del();
 			system("pause");
 			break;
 		case 3:
-			vib = menuvib("Перегрузка оператора вывода первого списка", "Перегрузка оператора вывода второго списка");
+			vib = menuvib("РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РїРµСЂРІРѕРіРѕ СЃРїРёСЃРєР°", "РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР° РІС‚РѕСЂРѕРіРѕ СЃРїРёСЃРєР°");
 			if (vib == 0) cout << list1;
 			else cout << list2;
 			system("pause");
 			break;
 		case 4:
-			if (list1 == list2) cout << "Списки равны" << endl;
-			else cout << "Списки не равны" << endl;
+			if (list1 == list2) cout << "РЎРїРёСЃРєРё СЂР°РІРЅС‹" << endl;
+			else cout << "РЎРїРёСЃРєРё РЅРµ СЂР°РІРЅС‹" << endl;
 			system("pause");
 			break;
 		case 5:
@@ -186,23 +186,23 @@ int menuMain()
 	{
 		choiceButton = (choiceButton + 6) % 6;
 
-		if (choiceButton == 0) cout << "->Добавление элементов в списки" << endl;
-		else cout << "Добавление элементов в списки" << endl;
+		if (choiceButton == 0) cout << "->Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РІ СЃРїРёСЃРєРё" << endl;
+		else cout << "Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РІ СЃРїРёСЃРєРё" << endl;
 
-		if (choiceButton == 1) cout << "->Просмотр списков" << endl;
-		else cout << "Просмотр списков" << endl;
+		if (choiceButton == 1) cout << "->РџСЂРѕСЃРјРѕС‚СЂ СЃРїРёСЃРєРѕРІ" << endl;
+		else cout << "РџСЂРѕСЃРјРѕС‚СЂ СЃРїРёСЃРєРѕРІ" << endl;
 
-		if (choiceButton == 2) cout << "->Удаление последнего элемента из списков" << endl;
-		else cout << "Удаление последнего элемента из списков" << endl;
+		if (choiceButton == 2) cout << "->РЈРґР°Р»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РёР· СЃРїРёСЃРєРѕРІ" << endl;
+		else cout << "РЈРґР°Р»РµРЅРёРµ РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РёР· СЃРїРёСЃРєРѕРІ" << endl;
 
-		if (choiceButton == 3) cout << "->Перегрузка оператора вывода" << endl;
-		else cout << "Перегрузка оператора вывода" << endl;
+		if (choiceButton == 3) cout << "->РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР°" << endl;
+		else cout << "РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹РІРѕРґР°" << endl;
 
-		if (choiceButton == 4) cout << "->Перегрузка оператора сравнения" << endl;
-		else cout << "Перегрузка оператора сравнения" << endl;
+		if (choiceButton == 4) cout << "->РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ" << endl;
+		else cout << "РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ" << endl;
 
-		if (choiceButton == 5) cout << "->Выход" << endl;
-		else cout << "Выход" << endl;
+		if (choiceButton == 5) cout << "->Р’С‹С…РѕРґ" << endl;
+		else cout << "Р’С‹С…РѕРґ" << endl;
 
 		button = _getch();
 		if (button == 224)
