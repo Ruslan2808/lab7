@@ -114,10 +114,11 @@ template<class T> bool List<T>::operator ==(List<T>& list) {
 }
 
 template <class T> List<T>::~List() {
-	delete begin;
-	delete end;
-	delete prev;
-	delete next;
+	while (begin) {
+		end = begin->next;
+		delete begin;
+		begin = end;
+	}
 }
 
 int menuMain();
